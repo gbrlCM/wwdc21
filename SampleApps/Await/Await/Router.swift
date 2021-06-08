@@ -9,8 +9,10 @@ import SwiftUI
 
 struct Router: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            RepoListView()
+                .navigationTitle("Repositories")
+        }
     }
 }
 

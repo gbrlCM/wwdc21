@@ -24,7 +24,7 @@ struct UserSelectionView: View {
                 TextField("User", text: $userLogin)
                     
                 Button(action: {
-                    detach {
+                    async {
                         await advanceScreen(forUser: userLogin)
                     }
                 }, label: {

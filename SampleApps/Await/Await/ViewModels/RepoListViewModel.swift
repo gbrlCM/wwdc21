@@ -10,26 +10,13 @@ import SwiftUI
 
 final class RepoListViewModel: ObservableObject {
     
-    @Published var repositories: [Repository] = [] {
-        didSet {
-            print(self.repositories)
-        }
-    }
-    let session = URLSession.shared
+    @Published var repositories: [Repository] = []
     
-    func fetchRepos() async throws {
-        guard let url = URL(string: "https://api.github.com/users/gbrlCM/repos") else {
-            return
-        }
-        let request = try await session.data(from: url)
-        print(request.1)
-        
-        do {
-            let repositories = try JSONDecoder().decode([Repository].self, from: request.0)
-            self.repositories = repositories
-        } catch let error {
-            print(error)
-        }
-        
+    let session = URLSession.shared
+    let datasource = GitHubDataservice()
+    
+    func fetchRepos(from user: String) async throws {
+        let repos = try await datasource.fetchRepos(from: user)
+        repositories = repos
     }
 }

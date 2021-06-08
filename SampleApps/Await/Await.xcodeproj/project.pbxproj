@@ -12,6 +12,9 @@
 		5B3F7EB8266FA7260056BC48 /* RepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F7EB7266FA7260056BC48 /* RepoCell.swift */; };
 		5B3F7EBA266FA9CA0056BC48 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F7EB9266FA9CA0056BC48 /* Repository.swift */; };
 		5B3F7EBF266FDAFE0056BC48 /* RepoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F7EBE266FDAFD0056BC48 /* RepoView.swift */; };
+		5B3F7EC1266FEA880056BC48 /* UserSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F7EC0266FEA880056BC48 /* UserSelectionView.swift */; };
+		5B3F7EC3266FEDD30056BC48 /* GitHubDataservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F7EC2266FEDD30056BC48 /* GitHubDataservice.swift */; };
+		5B3F7EC5266FF0040056BC48 /* UserSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F7EC4266FF0040056BC48 /* UserSelectionViewModel.swift */; };
 		5BF5EEAD266FA32D000838FC /* AwaitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF5EEAC266FA32D000838FC /* AwaitApp.swift */; };
 		5BF5EEAF266FA32D000838FC /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF5EEAE266FA32D000838FC /* Router.swift */; };
 		5BF5EEB1266FA330000838FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BF5EEB0266FA330000838FC /* Assets.xcassets */; };
@@ -24,6 +27,9 @@
 		5B3F7EB7266FA7260056BC48 /* RepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCell.swift; sourceTree = "<group>"; };
 		5B3F7EB9266FA9CA0056BC48 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		5B3F7EBE266FDAFD0056BC48 /* RepoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoView.swift; sourceTree = "<group>"; };
+		5B3F7EC0266FEA880056BC48 /* UserSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSelectionView.swift; sourceTree = "<group>"; };
+		5B3F7EC2266FEDD30056BC48 /* GitHubDataservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubDataservice.swift; sourceTree = "<group>"; };
+		5B3F7EC4266FF0040056BC48 /* UserSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSelectionViewModel.swift; sourceTree = "<group>"; };
 		5BF5EEA9266FA32D000838FC /* Await.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Await.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BF5EEAC266FA32D000838FC /* AwaitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwaitApp.swift; sourceTree = "<group>"; };
 		5BF5EEAE266FA32D000838FC /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -53,6 +59,7 @@
 		5B3F7EBD266FAC840056BC48 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				5B3F7EC2266FEDD30056BC48 /* GitHubDataservice.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -100,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				5B3F7EB2266FA6BC0056BC48 /* RepoListViewModel.swift */,
+				5B3F7EC4266FF0040056BC48 /* UserSelectionViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -110,6 +118,7 @@
 				5B3F7EB6266FA6CC0056BC48 /* Components */,
 				5B3F7EB4266FA6C80056BC48 /* RepoListView.swift */,
 				5B3F7EBE266FDAFD0056BC48 /* RepoView.swift */,
+				5B3F7EC0266FEA880056BC48 /* UserSelectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -192,8 +201,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B3F7EC5266FF0040056BC48 /* UserSelectionViewModel.swift in Sources */,
 				5B3F7EB8266FA7260056BC48 /* RepoCell.swift in Sources */,
+				5B3F7EC3266FEDD30056BC48 /* GitHubDataservice.swift in Sources */,
 				5B3F7EBF266FDAFE0056BC48 /* RepoView.swift in Sources */,
+				5B3F7EC1266FEA880056BC48 /* UserSelectionView.swift in Sources */,
 				5BF5EEAF266FA32D000838FC /* Router.swift in Sources */,
 				5BF5EEAD266FA32D000838FC /* AwaitApp.swift in Sources */,
 				5B3F7EB5266FA6C80056BC48 /* RepoListView.swift in Sources */,

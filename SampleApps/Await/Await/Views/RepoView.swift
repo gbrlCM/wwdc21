@@ -11,9 +11,31 @@ struct RepoView: View {
     var repo: Repository
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-            .navigationTitle(repo.name)
-            .onAppear(perform: {print(repo.name)})
+        HStack(alignment: .top, spacing: 20) {
+            VStack(alignment: .leading) {
+                Text(repo.name)
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                
+                if let languague = repo.language {
+                    Label(title: {
+                        Text(languague)
+                    }, icon: {
+                        Image(systemName: languague == "Swift" ? "swift" : "chevron.left.slash.chevron.right")
+                        
+                    })
+                }
+                
+                if let description = repo.description {
+                    Text(description)
+                        .padding(.top, 16)
+                }
+                Spacer()
+            }
+            Spacer()
+        }
+        .padding(.all, 16)
+        
     }
 }
 

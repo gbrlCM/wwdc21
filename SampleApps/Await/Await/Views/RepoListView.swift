@@ -11,22 +11,17 @@ struct RepoListView: View {
     
     @StateObject var viewModel: RepoListViewModel = RepoListViewModel()
     @State var shouldMove: Bool = false
+    @Binding var userName: String
     
     var body: some View {
-        List(0 ..< viewModel.repositories.count) { index in
- 
-            NavigationLink(
-                destination:
-                    RepoView(repo: viewModel.repositories[index]),
-                isActive: $shouldMove,
-                label: {
-                    RepoCell(repo: viewModel.repositories[index])
-            })
+        List(viewModel.repositories) { repo in
+            RepoCell(repo: repo)
         }
         .listStyle(.plain)
+        .navigationTitle(Text("Repositories"))
         .task {
             do {
-                try await viewModel.fetchRepos()
+                try await viewModel.fetchRepos(from: userName)
             } catch let error {
                 print(error)
             }
@@ -36,6 +31,6 @@ struct RepoListView: View {
 
 struct RepoListView_Previews: PreviewProvider {
     static var previews: some View {
-        RepoListView()
+        RepoListView(userName: .constant("gbrlCM"))
     }
 }

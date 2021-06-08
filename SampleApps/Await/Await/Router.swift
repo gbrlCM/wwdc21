@@ -8,10 +8,17 @@
 import SwiftUI
 
 struct Router: View {
+    @State var userSelectionNavigation: Bool = false
+    @State var cellNavigation: Bool = false
+    @State var userName: String = ""
+    
+    
     var body: some View {
         NavigationView {
-            RepoListView()
-                .navigationTitle("Repositories")
+            VStack {
+                UserSelectionView(userLogin: $userName, shouldNavigate: $userSelectionNavigation)
+                NavigationLink(destination: RepoListView(userName: $userName), isActive: $userSelectionNavigation, label: { EmptyView() })
+            }
         }
     }
 }

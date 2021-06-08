@@ -12,38 +12,28 @@ struct RepoCell: View {
     var imageSize: CGFloat = 50
     
     var body: some View {
-        VStack {
-            HStack {
-                Text("\(repo.name)")
-                    .fontWeight(.bold)
-                    .font(.title2)
-                if repo.isPrivate {
-                    Image(systemName: "lock")
-                } else {
-                    Image(systemName: "lock.open")
-                }
-                Spacer()
-            }
-            
-            if let description = repo.description {
+        NavigationLink (destination: RepoView(repo: repo), label: {
+            VStack {
                 HStack {
-                    Text(description)
-                    Spacer()
-                }
-            }
-            
-            if let languague = repo.language {
-                HStack {
-                    Text(languague)
-                    if languague == "Swift" {
-                        Image(systemName: "swift")
+                    Text("\(repo.name)")
+                        .fontWeight(.bold)
+                        .font(.title2)
+                    if repo.isPrivate {
+                        Image(systemName: "lock")
+                    } else {
+                        Image(systemName: "lock.open")
                     }
                     Spacer()
                 }
-                .padding(.top, 1)
                 
+                if let description = repo.description {
+                    HStack {
+                        Text(description)
+                        Spacer()
+                    }
+                }
             }
-        }
+        })
         .padding(.leading, 8)
         .padding(.trailing, 8)
     }

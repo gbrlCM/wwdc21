@@ -27,11 +27,11 @@ YourView()
 ```
 É possivel agora escolher materiais para o background de suas views, os materias são os demonstrados pela imagem abaixo:
 
-IMAGEM
+![materiais](https://github.com/gbrlCM/wwdc21/blob/main/Talks/Add%20rich%20graphics%20to%20your%20SwiftUI%20app/Resources/materials.png)
 
 Também é possivel colocar um material para o estilo de views como textos com os seguintes modificadores:
 
-IMAGEM
+![foreground](https://github.com/gbrlCM/wwdc21/blob/main/Talks/Add%20rich%20graphics%20to%20your%20SwiftUI%20app/Resources/foreground.png)
 
 É possivel usar outros elementos agora como elementos de safe Area e isso é feito colocando os elementos que deseja que se comportem como limites dentro da safeArea dentro do módificador _safeAreaInset(edge: )_ assim os demais elementos irão usa-lo como referencia da safe area, nunca ficando acima ou abaixo dele.
 

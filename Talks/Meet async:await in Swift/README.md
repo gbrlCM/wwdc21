@@ -2,11 +2,11 @@
 
 É um modo de escrever código assincrono de forma menos verbosa e segura. quando uma função assincrona é chamada ela desbloqueia a thread e a execução é retornada quando a função termina. a forma anterior de fazer esse código seria com _ _completion handlers_ e o código pode ser visto abaixo:
 
-IMAGEM
+![Completion Handler](https://github.com/gbrlCM/wwdc21/blob/main/Talks/Meet%20async:await%20in%20Swift/Images/compHandler.png)
 
 Esse tipo de código pode ter bugs dificeis de ver inicialmente, além de ser muito pouco legivel, com o uso de async/await o código é simplificado e tornado mais legivel como pode ser visto da forma a seguir
 
-IMAGEM
+![Async](https://github.com/gbrlCM/wwdc21/blob/main/Talks/Meet%20async:await%20in%20Swift/Images/async.png)
 
 O uso de async/await pode ser usado não só em funções mas tambem em propriedades computaveis, inicializadores, ifs, e em for loops no caso de sequencias assincronas.
 

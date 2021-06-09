@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B17F23226703D0600516E62 /* GitHubDataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B17F23126703D0600516E62 /* GitHubDataServiceTests.swift */; };
+		5B17F23A26703DE400516E62 /* AwaitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B17F23926703DE400516E62 /* AwaitTests.swift */; };
 		5B3F7EB3266FA6BC0056BC48 /* RepoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F7EB2266FA6BC0056BC48 /* RepoListViewModel.swift */; };
 		5B3F7EB5266FA6C80056BC48 /* RepoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F7EB4266FA6C80056BC48 /* RepoListView.swift */; };
 		5B3F7EB8266FA7260056BC48 /* RepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F7EB7266FA7260056BC48 /* RepoCell.swift */; };
@@ -21,7 +23,20 @@
 		5BF5EEB4266FA330000838FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BF5EEB3266FA330000838FC /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5B17F23B26703DE400516E62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5BF5EEA1266FA32D000838FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BF5EEA8266FA32D000838FC;
+			remoteInfo = Await;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		5B17F23126703D0600516E62 /* GitHubDataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubDataServiceTests.swift; sourceTree = "<group>"; };
+		5B17F23726703DE400516E62 /* AwaitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AwaitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B17F23926703DE400516E62 /* AwaitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwaitTests.swift; sourceTree = "<group>"; };
 		5B3F7EB2266FA6BC0056BC48 /* RepoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewModel.swift; sourceTree = "<group>"; };
 		5B3F7EB4266FA6C80056BC48 /* RepoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListView.swift; sourceTree = "<group>"; };
 		5B3F7EB7266FA7260056BC48 /* RepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCell.swift; sourceTree = "<group>"; };
@@ -38,6 +53,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5B17F23426703DE400516E62 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5BF5EEA6266FA32D000838FC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -48,6 +70,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B17F23826703DE400516E62 /* AwaitTests */ = {
+			isa = PBXGroup;
+			children = (
+				5B17F23926703DE400516E62 /* AwaitTests.swift */,
+			);
+			path = AwaitTests;
+			sourceTree = "<group>";
+		};
 		5B3F7EB6266FA6CC0056BC48 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				5B3F7EC2266FEDD30056BC48 /* GitHubDataservice.swift */,
+				5B17F23126703D0600516E62 /* GitHubDataServiceTests.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -68,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				5BF5EEAB266FA32D000838FC /* Await */,
+				5B17F23826703DE400516E62 /* AwaitTests */,
 				5BF5EEAA266FA32D000838FC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				5BF5EEA9266FA32D000838FC /* Await.app */,
+				5B17F23726703DE400516E62 /* AwaitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,6 +167,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5B17F23626703DE400516E62 /* AwaitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B17F23D26703DE400516E62 /* Build configuration list for PBXNativeTarget "AwaitTests" */;
+			buildPhases = (
+				5B17F23326703DE400516E62 /* Sources */,
+				5B17F23426703DE400516E62 /* Frameworks */,
+				5B17F23526703DE400516E62 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B17F23C26703DE400516E62 /* PBXTargetDependency */,
+			);
+			name = AwaitTests;
+			productName = AwaitTests;
+			productReference = 5B17F23726703DE400516E62 /* AwaitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		5BF5EEA8266FA32D000838FC /* Await */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5BF5EEB7266FA330000838FC /* Build configuration list for PBXNativeTarget "Await" */;
@@ -161,6 +212,10 @@
 				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
+					5B17F23626703DE400516E62 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 5BF5EEA8266FA32D000838FC;
+					};
 					5BF5EEA8266FA32D000838FC = {
 						CreatedOnToolsVersion = 13.0;
 					};
@@ -180,11 +235,19 @@
 			projectRoot = "";
 			targets = (
 				5BF5EEA8266FA32D000838FC /* Await */,
+				5B17F23626703DE400516E62 /* AwaitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5B17F23526703DE400516E62 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5BF5EEA7266FA32D000838FC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -197,6 +260,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5B17F23326703DE400516E62 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B17F23A26703DE400516E62 /* AwaitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5BF5EEA5266FA32D000838FC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -211,12 +282,67 @@
 				5B3F7EB5266FA6C80056BC48 /* RepoListView.swift in Sources */,
 				5B3F7EB3266FA6BC0056BC48 /* RepoListViewModel.swift in Sources */,
 				5B3F7EBA266FA9CA0056BC48 /* Repository.swift in Sources */,
+				5B17F23226703D0600516E62 /* GitHubDataServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		5B17F23C26703DE400516E62 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5BF5EEA8266FA32D000838FC /* Await */;
+			targetProxy = 5B17F23B26703DE400516E62 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		5B17F23E26703DE400516E62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WK7599VNDW;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gbrlcm.AwaitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Await.app/Await";
+			};
+			name = Debug;
+		};
+		5B17F23F26703DE400516E62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WK7599VNDW;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gbrlcm.AwaitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Await.app/Await";
+			};
+			name = Release;
+		};
 		5BF5EEB5266FA330000838FC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -396,6 +522,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5B17F23D26703DE400516E62 /* Build configuration list for PBXNativeTarget "AwaitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B17F23E26703DE400516E62 /* Debug */,
+				5B17F23F26703DE400516E62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5BF5EEA4266FA32D000838FC /* Build configuration list for PBXProject "Await" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

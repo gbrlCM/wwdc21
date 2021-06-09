@@ -16,20 +16,15 @@ struct GitHubDataservice {
     
     func hasUser(_ user: String) async -> Bool {
         
-        guard let url = URL(string: "https://api.github.com/users/\(user)") else {
+        guard
+            let url = URL(string: "https://api.github.com/users/\(user)"),
+            let (_ , response) = try? await URLSession.shared.data(from: url),
+            let httpResponse = response as? HTTPURLResponse
+        else {
             return false
         }
         
-        do {
-            let (_ , response) = try await URLSession.shared.data(from: url)
-            
-            if let httpResponse = response as? HTTPURLResponse {
-                    print("statusCode: \(httpResponse.statusCode)")
-                if httpResponse.statusCode == 200 { return true }
-            }
-        } catch {
-            return false
-        }
+        if httpResponse.statusCode == 200 { return true }
         return false
     }
     
@@ -37,14 +32,13 @@ struct GitHubDataservice {
         guard let url = URL(string: "https://api.github.com/users/\(user)/repos") else {
             throw RequestErrors.invalidURL
         }
-        let request = try await URLSession.shared.data(from: url)
-        print(request.1)
         
         do {
+            let request = try await URLSession.shared.data(from: url)
             let repositories = try JSONDecoder().decode([Repository].self, from: request.0)
             return repositories
-        } catch let error {
-            throw error
+        } catch {
+            throw RequestErrors.failedFetching
         }
     }
 }

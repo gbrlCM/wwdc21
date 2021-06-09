@@ -52,5 +52,5 @@ func fetchThumbnails(for ids: [String]) async throws -> [String: UIImage] {
 ```
 Ok! Esse código tem muita informação então vamos lá, withThrowingTaskGroup é a forma de criar um grupo, o parametro of indica do que está criando um grupo no caso uma tupla de String e UIImage, dentro da closure é criado um for usando o método async de grupo que dentro dele executa a função assíncrona de conseguir uma thumb. Em seguida no for try await, novo elemento do swift, é atraido a váriavel thumbnail todo os elementos de forma thread safe e que evitam condições de corrida por final retornando as thumbnais.
 
-### async e asyncDetached
+
 
